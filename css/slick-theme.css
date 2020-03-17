@@ -1,0 +1,318 @@
+@charset 'UTF-8';
+/* Slider */
+.slick-loading .slick-list
+{
+    background: #fff url('./ajax-loader.gif') center center no-repeat;
+}
+
+/* Icons */
+@font-face
+{
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+
+    src: url('./fonts/slick.eot');
+    src: url('../fonts/slick.eot?#iefix') format('embedded-opentype'), url('../fonts/slick.woff') format('woff'), url('../fonts/slick.ttf') format('truetype'), url('../fonts/slick.svg#slick') format('svg');
+}
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: black;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+    left: -25px;
+}
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+.slick-prev:before
+{
+    content: '←';
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '→';
+}
+
+.slick-next
+{
+    right: -25px;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -25px;
+}
+.slick-next:before
+{
+    content: '→';
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '←';
+}
+
+/* Dots */
+.slick-dotted.slick-slider
+{
+    margin-bottom: 0; /* 30px */
+}
+
+.slick-dots
+{
+   position: absolute;
+   bottom: -25px;
+   
+   display: block;
+   
+   width: 100%;
+   padding: 0;
+   margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+
+.slick-dots li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 8px 0 8px;
+}
+.slick-dots li.slick-active button {
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    border: 4px solid white;
+    opacity: none;
+}
+.slick-dots li button {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* opacity: 0.502; */
+    border: none;
+    border-radius: 50%;
+    text-indent: -999px;
+    overflow: hidden;
+    padding: 0;
+}
+.features_slider_top .slick-dots li.slick-active button {
+    border-color: rgb(153, 153, 153);
+    background-color: transparent;
+}
+
+.features_slider_top .slick-dots li button {
+   background-color: rgb(204, 204, 204);
+}
+
+/* ====================================pricing-slider */
+
+.pricing-slider .slick-dots {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    border-radius: 20px;
+    width: 194px;
+    height: 40px;
+    border: 2px solid rgb(153, 153, 153);
+    margin: 36px auto 0;
+   padding: 0;
+    top: -80px;
+    left: 0;
+    right: 0;
+}
+
+.pricing-slider .slick-dots li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2px;
+}
+.pricing-slider .slick-dots li.slick-active button {
+    font-size: 14px;
+  font-family: "Lato";
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 1.2;
+    width: 90px;
+    height: 32px;
+    background-color: #AA66D0;
+    /* border: 2px solid white; */
+    border-radius: 20px;
+    opacity: none;
+    padding: 0;
+}
+.pricing-slider .slick-dots li button {
+    font-size: 20px;
+    font-family: 'Lato';
+    font-size: 14px;
+  font-family: "Lato";
+  color: rgb(102, 102, 102);
+  text-transform: uppercase;
+  line-height: 1.2;
+    width: 90px;
+    height: 32px;
+    background-color: transparent;
+    /* opacity: 0.502; */
+    border: none;
+    border-radius: 20px;
+    text-indent: 10px;
+    overflow: hidden;
+    
+}
+
+.pricing-slider .slick-dots li:first-child button:before {
+    content: "Monthly";
+    margin-right: 50px;
+}
+
+.pricing-slider .slick-dots li:last-child button:before {
+    content: "Yearly";
+    margin-right: 50px;
+    padding-left: 12px;
+}
+
+/* ==============================pricing-slider-bottome */
+
+.pricing-slider-bottome .slick-dots {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-flex: 1;
+            flex: 1;
+    position: absolute;
+   max-width: 570px;
+   height: 40px;
+    margin: 36px auto 0;
+   padding: 0;
+    top: -78px;
+    left: -3px;
+    
+}
+
+.pricing-slider-bottome .slick-dots li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 2px;
+}
+
+.pricing-slider-bottome .slick-dots li.slick-active button {
+    font-size: 14px;
+  font-family: "Lato";
+  color: rgb(102, 102, 102);
+  
+  text-transform: none;
+  line-height: 1.2;
+    width: 190px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid #AA66D0;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    opacity: none;
+    padding: 0;
+}
+.pricing-slider-bottome .slick-dots li button {
+    font-size: 20px;
+    font-family: 'Lato';
+    font-size: 14px;
+  color: rgb(255, 255, 255);
+  text-transform: none;
+  line-height: 1.2;
+    width: 186px;
+    height: 40px;
+    background-color: #AA66D0;
+    /* opacity: 0.502; */
+    border: none;
+    border-radius: 4px 4px 0 0;
+    text-indent: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+
+    
+}
+
+.pricing-slider-bottome .slick-dots li:first-child button:before {
+    content: "Lorem ipsum";
+    margin-right: 100px;
+}
+
+.pricing-slider-bottome .slick-dots li:nth-child(2) button:before {
+    content: "Lorem ipsum";
+    margin-right: 100px;
+    
+}
+
+.pricing-slider-bottome .slick-dots li:last-child button:before {
+    content: "Lorem ipsum";
+    margin-right: 100px;
+    
+}
+
+.pricing-slider-bottome .draggable {
+    padding: 0;
+    margin: 0;
+}
+
