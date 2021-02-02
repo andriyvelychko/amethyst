@@ -1,1 +1,1 @@
-# amethyst
+https://andriyvelychko.github.io/amethyst/
