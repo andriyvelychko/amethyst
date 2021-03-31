@@ -95,7 +95,7 @@ $(() => {
   });
 });
 //--------------------------------------------------
-     	$('.pricing-slider-item').slick({
+/*     	$('.pricing-slider-item').slick({
 		dots: false,
 		arrows: false,
   		infinite: true,
@@ -111,7 +111,7 @@ $(() => {
                     }
                 }
             ]
-});
+});*/
 //-------------------------------------------------
 /*<!-- /SLIDER -->*/
 	$('.pricing-slider, .pricing-slider-bottome').slick({
@@ -129,6 +129,19 @@ $(() => {
         .removeClass("active")
         .eq($(this).index())
         .addClass("active");
+    });
+
+//--------------------------------------------------
+$("ul.tabs__caption-1").on("click", "li:not(.active-1)", function() {
+      $(this)
+        .addClass("active-1")
+        .siblings()
+        .removeClass("active-1")
+        .closest("div.tabs-1")
+        .find("div.tabs__content-1")
+        .removeClass("active-1")
+        .eq($(this).index())
+        .addClass("active-1");
     });
 //--------------------------------------------------
 
@@ -190,4 +203,73 @@ $(document).ready(function () {
     });
 });
 //--------------------------------------------------
+//Modal popup
+$('.popup-gallery-1').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+                return item.el.attr('title');
+            }
+        }
+    });
+    $('.popup-gallery-2').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+                return item.el.attr('title');
+            }
+        }
+    });
+    $('.popup-gallery-3').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+                return item.el.attr('title');
+            }
+        }
+    });
+    $('.popup-gallery-4').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+                return item.el.attr('title');
+            }
+        }
+    });
 });
