@@ -1826,6 +1826,10 @@ footer .btn {
 	.pricing__item {
     	margin-top: 30px;
 	}
+	.price-tabs .tabs__content.active {
+	    flex-wrap: wrap;
+	    justify-content: center;
+	}
 	.faq {
 		display: block;
 	}
