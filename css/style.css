@@ -980,7 +980,8 @@ header {
 
 .pricing {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
+	flex-wrap: wrap;
 	margin-top: 38px;
 	margin-bottom: 65px;
 }
@@ -991,6 +992,7 @@ header {
 	border: 1px solid #CDCDCD;
 	border-radius: 4px;
 	margin: 10px;
+	flex-basis: 350px;
 }
 
 .pricing-header__title {
@@ -1102,7 +1104,7 @@ header {
 	list-style: circle;
 	list-style-position: inside;
 	text-align: center;
-	margin-left: 20px;
+	/*margin-left: 20px;*/
 }
 
 /* ////////////////////////////// details */
@@ -1825,10 +1827,6 @@ footer .btn {
 	}
 	.pricing__item {
     	margin-top: 30px;
-	}
-	.price-tabs .tabs__content.active {
-	    flex-wrap: wrap;
-	    justify-content: center;
 	}
 	.faq {
 		display: block;
